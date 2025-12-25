@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>India Living Conditions | Tableau Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<!-- INTRO -->
+<section class="hero">
+  <div class="overlay">
+    <img src="images/india_bg.png" class="flag">
+
+    <h1>Living Conditions Across Indian Households</h1>
+
+    <p class="subtitle">Census of India 2011 · Tableau Visual Analytics</p>
+
+    <p>
+      This project analyzes household living conditions across Indian states using
+      Census of India 2011 Housing & Amenities data.
+    </p>
+
+    <p>
+      The goal was to understand regional disparities in access to basic amenities
+      such as electricity, sanitation, drinking water, and overall household infrastructure.
+    </p>
+
+    <p>
+      The project was designed as a multi-dashboard Tableau analysis focusing on
+      visual storytelling, inequality detection, and policy-relevant insights.
+    </p>
+
+    <button onclick="scrollTo('electricity')" class="down">↓</button>
+  </div>
+</section>
+
+<!-- ELECTRICITY -->
+<section id="electricity" class="section electricity hidden">
+  <h2>⚡ Electricity Access</h2>
+
+  <div class="side left">
+    <img src="images/bulb.png" class="bulb">
+    <img src="images/fan.png" class="fan">
+  </div>
+
+  <img src="images/electricity.png" class="dashboard">
+
+  <div class="side right">
+    <img src="images/bulb.png" class="bulb">
+    <img src="images/fan.png" class="fan">
+  </div>
+</section>
+
+<!-- WATER -->
+<section id="water" class="section water hidden">
+  <h2>🚰 Water & Sanitation</h2>
+
+  <div class="side left">
+    <img src="images/water_drop.png" class="drop">
+    <img src="images/glass.png" class="glass">
+  </div>
+
+  <img src="images/water.png" class="dashboard">
+
+  <div class="side right">
+    <img src="images/water_drop.png" class="drop">
+    <img src="images/water_drop.png" class="drop">
+  </div>
+</section>
+
+<!-- HOUSEHOLDS -->
+<section id="households" class="section households hidden">
+  <h2>🏠 Household Living Conditions</h2>
+
+  <div class="side left">
+    <img src="images/house.png" class="house">
+    <img src="images/house.png" class="house">
+  </div>
+
+  <img src="images/households.png" class="dashboard">
+
+  <div class="side right">
+    <img src="images/house.png" class="house">
+    <img src="images/house.png" class="house">
+  </div>
+</section>
+
+<footer>
+  <p>Brinda Ramanujam · Tableau Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

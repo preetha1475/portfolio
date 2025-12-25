@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>India Living Conditions | Tableau Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO -->
+<section class="hero">
+  <div class="overlay">
+    <img src="images/india_bg.png" class="flag">
+
+    <h1>Living Conditions Across Indian Households</h1>
+    <p class="subtitle">Census of India 2011 · Tableau Visual Analytics</p>
+
+    <div class="intro-text">
+      <p>This project analyzes <strong>household living conditions across Indian states</strong> using Census of India 2011 Housing & Amenities data.</p>
+      <p>The goal was to understand <strong>regional disparities in access to basic amenities</strong> such as electricity, sanitation, drinking water, and overall household infrastructure.</p>
+      <p>The project was designed as a <strong>multi-dashboard Tableau analysis</strong> focusing on visual storytelling, inequality detection, and policy-relevant insights.</p>
+    </div>
+
+    <button onclick="scrollTo('electricity')" class="down">↓</button>
+  </div>
+</section>
+
+<!-- DATASET & TOOLS -->
+<!-- DATASET & TOOLS -->
+<section id="dataset" class="section dataset hidden">
+  <h1>📊 Dataset & Tools</h1>
+
+  <!-- Single Dataset Image -->
+  <div class="dataset-image-container">
+    <img src="images/dataset.png" class="dashboard large-image" alt="Census Dataset">
+  </div>
+
+  <!-- Dataset link -->
+  <p class="dataset-link">
+    <a href="https://microdata.gov.in/NADA/index.php/catalog/213/related-materials?utm_source=chatgpt.com" target="_blank">
+      View Dataset on Microdata Government Portal
+    </a>
+  </p>
+
+  <div class="content-block">
+    <h3>Dataset Used</h3>
+    <p><strong>Source:</strong> Census of India 2011 – Housing & Amenities</p>
+    <p><strong>Level:</strong> State-level (India)</p>
+    <p><strong>Type:</strong> Socio-economic government data</p>
+
+    <h4>Key Variables:</h4>
+    <ul>
+      <li>Total number of households</li>
+      <li>Electricity availability (with/without toilet)</li>
+      <li>Toilet availability (with/without electricity)</li>
+      <li>Main source of drinking water</li>
+      <li>Rural / Urban classification</li>
+    </ul>
+
+    <h3>Tools & Technologies</h3>
+    <ul>
+      <li>Tableau Desktop / Tableau Public</li>
+      <li>Calculated Fields</li>
+      <li>Table Calculations</li>
+      <li>Geographic Mapping</li>
+      <li>Dashboard Actions & Filters</li>
+    </ul>
+  </div>
+</section>
+<!-- ELECTRICITY -->
+<section id="electricity" class="section electricity hidden">
+  <h1>⚡ Electricity Access Across Indian Households</h1>
+
+  <div class="dashboard-description">
+    <h3>Objective</h3>
+    <p>Identify <strong>regional inequality in electricity access</strong> and highlight states contributing most to electricity deprivation.</p>
+
+    
+    <h3>Key Insight</h3>
+    <p>While most states show high electricity access, <strong>a small number of high-household states contribute disproportionately to electricity deprivation</strong>, following a Pareto (80/20) pattern.</p>
+  </div>
+
+  <div class="side left">
+    <img src="images/bulb.png" class="bulb">
+    <img src="images/fan.png" class="fan">
+  </div>
+
+  <img src="images/electricity.png" class="dashboard">
+
+  <div class="side right">
+    <img src="images/bulb.png" class="bulb">
+    <img src="images/fan.png" class="fan">
+  </div>
+</section>
+
+<!-- WATER -->
+<section id="water" class="section water hidden">
+  <h1>🚰 Water & Sanitation Inequality</h1>
+
+  <div class="dashboard-description">
+    <h3>Objective</h3>
+    <p>Analyze <strong>sanitation access and drinking water quality</strong> rather than just availability.</p>
+
+        <h3>Key Insight</h3>
+    <p>Several states show <strong>high drinking water availability but low sanitation access</strong>, highlighting a <strong>policy gap between water supply and sanitation infrastructure</strong>.</p>
+  </div>
+
+  <div class="side left">
+    <img src="images/water_drop.png" class="drop">
+    <img src="images/glass.png" class="glass">
+  </div>
+
+  <img src="images/water.png" class="dashboard">
+
+  <div class="side right">
+    <img src="images/water_drop.png" class="drop">
+    <img src="images/water_drop.png" class="drop">
+  </div>
+</section>
+
+<!-- HOUSEHOLDS -->
+<section id="households" class="section households hidden">
+  <h1>🏠 Household Living Conditions Index</h1>
+
+  <div class="dashboard-description">
+    <h3>Objective</h3>
+    <p>Assess <strong>overall household well-being</strong> using a composite measure.</p>
+
+   
+    <h3>Key Insight</h3>
+    <p>States with <strong>large household populations and low composite scores</strong> face the highest infrastructure stress, indicating where targeted intervention is most needed.</p>
+  </div>
+
+  <div class="side left">
+    <img src="images/house.png" class="house">
+    <img src="images/house.png" class="house">
+  </div>
+
+  <img src="images/households.png" class="dashboard">
+
+  <div class="side right">
+    <img src="images/house.png" class="house">
+    <img src="images/house.png" class="house">
+  </div>
+</section>
+
+<!-- LEARNINGS -->
+<section id="features" class="section features hidden">
+    <div class="content-block">
+        <ul>
+                 <h3>Key Learnings</h3>
+    <ul>
+      <li>Data cleaning and preprocessing of real-world datasets.</li>
+      <li>Designing dashboards for clear storytelling and audience engagement.</li>
+      <li>Applying analytical techniques like Pareto analysis, composite indices, and rankings.</li>
+      <li>Understanding and visualizing socio-economic disparities effectively.</li>
+      <li>Using Tableau features such as calculated fields, table calculations, parameters, and filters.</li>
+      <li>Creating interactive dashboards with multiple views and actions.</li>
+      <li>Handling both categorical and numerical data accurately.</li>
+      <li>Optimizing visualizations for clarity, simplicity, and insight delivery.</li>
+      <li>Developing a professional portfolio-ready presentation of data analysis projects.</li>
+    </ul>
+    <h3>Conclusion</h3>
+    <p>This project demonstrates my ability to <strong>clean, analyze, and visualize complex socio-economic data</strong> using Tableau, transforming raw Census data into <strong>actionable insights</strong> with advanced dashboard design.</p>
+
+      </div>
+</section>
+
+<footer>
+  <p>PREETHA H · Tableau Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

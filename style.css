@@ -1,0 +1,130 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Segoe UI, sans-serif; scroll-behavior:smooth; }
+
+/* HERO */
+.hero {
+  height:100vh;
+  background:url(images/india_bg.jpg) center/cover no-repeat;
+}
+.overlay {
+  background:rgba(0,0,0,.6);
+  height:100%;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.flag {
+  width:120px;
+  animation:wave 2s infinite ease-in-out;
+}
+.down {
+  font-size:2.5rem;
+  background:none;
+  border:none;
+  color:white;
+  animation:bounce 1.5s infinite;
+}
+
+/* SECTIONS */
+.section {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px;
+}
+.dashboard {
+  width:60%;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+.side {
+  width:15%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:30px;
+}
+
+/* ELECTRICITY */
+.electricity { background:#0f2027; color:white; }
+.bulb { width:50px; animation:glow 1.5s infinite; }
+.fan { width:70px; animation:spin 1s linear infinite; }
+
+/* WATER */
+.water { background:#dff3ff; }
+.drop { width:30px; animation:drop 1.5s infinite; }
+.glass { width:70px; animation:fill 3s infinite; }
+
+/* HOUSEHOLDS */
+.households { background:#f6efe8; }
+.house {
+  width:60px;
+  animation:build 2s infinite;
+}
+.hero {
+  /* Light to dark red gradient */
+  background: linear-gradient(135deg, #ff7474, #ff3131, #cf1313);
+  color: #fff; /* white text for contrast */
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.2); /* slight dark overlay for readability */
+  padding: 40px;
+  border-radius: 15px;
+}
+/* Make dataset image larger */
+.dashboard.large-image {
+    width: 100%;       /* Increase width (adjust as needed) */
+    max-width: 10000px; /* Optional max width */
+    display: block;
+    margin: 20px auto; /* Center the image */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Optional shadow for professional look */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 15px auto;
+  line-height: 1.6;
+}
+
+.hero .down {
+  margin-top: 30px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* HIDDEN + REVEAL */
+.hidden { opacity:0; transform:translateY(60px); transition:1s; }
+.show { opacity:1; transform:translateY(0); }
+
+/* FOOTER */
+footer {
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:20px;
+}
+
+/* ANIMATIONS */
+@keyframes wave { 50%{transform:rotate(5deg);} }
+@keyframes bounce { 50%{transform:translateY(10px);} }
+@keyframes glow { 50%{filter:brightness(2);} }
+@keyframes spin { to{transform:rotate(360deg);} }
+@keyframes drop { 50%{transform:translateY(20px);} }
+@keyframes fill { 50%{transform:scaleY(1.1);} }
+@keyframes build { 50%{transform:scale(1.1);} }
