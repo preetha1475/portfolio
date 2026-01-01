@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preetha | Data Science Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: #050816;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ===== HIGH TECH BACKGROUND ===== */
+    canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(5, 8, 22, 0.6);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav h1 {
+      color: #00f6ff;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00f6ff;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero-content h3 {
+      color: #aaa;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-content span {
+      color: #00f6ff;
+    }
+
+    .hero-content p {
+      margin: 20px 0 30px;
+      color: #cfcfcf;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #00f6ff, #7c00ff);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width: 768px) {
+      nav { padding: 20px; }
+      .hero { padding: 0 30px; }
+      .hero-content h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg"></canvas>
+
+  <nav>
+    <h1>Preetha</h1>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="aboutpage.html">About</a></li>
+      <li><a href="cpage.html">Certificates</a></li>
+      <li><a href="pro.html">Projects</a></li>
+      <li><a href="tools.html">Tools</a></li>
+
+      <li><a href="contacs.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h3>Hello, I'm</h3>
+      <h1><span>Preetha H</span><br/>Data Science Undergraduate</h1>
+      <p>
+        Enthusiastic and goal-oriented Data Science student with strong skills in Python, R, SQL, 
+        Machine Learning, and Data Visualization. Passionate about building intelligent, real-world solutions.
+      </p>
+          </div>
+  </section>
+
+  <script>
+    /* ===== PARTICLE BACKGROUND ===== */
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.7;
+        this.speedY = (Math.random() - 0.5) * 0.7;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+      draw() {
+        ctx.fillStyle = '#00f6ff';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < 120; i++) particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    });
+
+    initParticles();
+    animate();
+  </script>
+
+</body>
+</html>

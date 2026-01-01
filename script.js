@@ -1,15 +1,6 @@
-function scrollTo(id) {
-  document.getElementById(id).scrollIntoView({ behavior:'smooth' });
+function showSection(sectionId) {
+  const sections = document.querySelectorAll(".page");
+  sections.forEach(section => section.classList.remove("active"));
+
+  document.getElementById(sectionId).classList.add("active");
 }
-
-const sections = document.querySelectorAll('.hidden');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold:0.3 });
-
-sections.forEach(sec => observer.observe(sec));

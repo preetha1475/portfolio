@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Preetha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: #050816;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(5, 8, 22, 0.6);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav h1 { color: #00f6ff; }
+    nav ul { list-style: none; display: flex; gap: 30px; }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav ul li a:hover { color: #00f6ff; }
+
+    .contact {
+      padding: 150px 80px 80px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2.8rem;
+      color: #00f6ff;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      color: #cfcfcf;
+      margin-bottom: 50px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 30px 20px;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(0,246,255,0.35);
+    }
+
+    .contact-card h3 {
+      color: #00f6ff;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      font-size: 0.95rem;
+      color: #ddd;
+      word-break: break-word;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #00f6ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 60px;
+      padding: 14px 34px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #00f6ff, #7c00ff);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+
+    .resume-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 768px) {
+      nav { padding: 20px; }
+      .contact { padding: 130px 30px; }
+      .title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Preetha</h1>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="aboutpage.html">About</a></li>
+      <li><a href="cpage.html">Certificates</a></li>
+      <li><a href="pro.html">Projects</a></li>
+      <li><a href="tools.html">Tools</a></li>
+
+      <li><a href="contacs.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+<section class="contact">
+  <h2 class="title">Get in Touch</h2>
+  <p class="subtitle">
+    Feel free to reach out for internships, projects, or collaborations.
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- Email -->
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>pretha1475@gmail.com</p>
+      <a href="mailto:pretha1475@gmail.com">Send Mail</a>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="contact-card">
+      <h3>LinkedIn</h3>
+      <p>www.linkedin.com/in/preethahari</p>
+      <a href="https://www.linkedin.com/in/preethahari/" target="_blank">View Profile</a>
+    </div>
+
+    <!-- Resume -->
+    <div class="contact-card">
+      <h3>Resume</h3>
+      <p>Download my resume</p>
+      <a href="assests/Preetha_Resume.pdf" download>Download PDF</a>
+    </div>
+
+  </div>
+
+  <a href="assests/Preetha_Resume.pdf" class="resume-btn" download>
+    Download Resume
+  </a>
+</section>
+
+</body>
+</html>

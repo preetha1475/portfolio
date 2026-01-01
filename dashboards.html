@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboards | Preetha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: #050816;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    canvas { position: fixed; inset: 0; z-index: -1; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(5, 8, 22, 0.6);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav h1 { color: #00f6ff; }
+    nav ul { list-style: none; display: flex; gap: 30px; }
+    nav ul li a { color: #fff; text-decoration: none; transition: 0.3s; }
+    nav ul li a:hover { color: #00f6ff; }
+
+    .dashboards {
+      padding: 140px 80px 80px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .title {
+      font-size: 2.6rem;
+      color: #00f6ff;
+      margin-bottom: 20px;
+    }
+
+    .sub-title {
+      margin: 40px 0 25px;
+      font-size: 1.8rem;
+      color: #7df9ff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+    }
+
+    .dash-box {
+      position: relative;
+      height: 180px;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      background: linear-gradient(135deg, rgba(0,246,255,0.15), rgba(124,0,255,0.15));
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .dash-box:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 0 30px rgba(0,246,255,0.35);
+    }
+
+    .dash-name {
+      text-align: center;
+      padding: 20px;
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .dash-box:hover .dash-name {
+      opacity: 0;
+    }
+
+    .tool {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(0,246,255,0.2);
+      color: #00f6ff;
+    }
+
+    .dash-img {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.1);
+      transition: 0.5s ease;
+    }
+
+    .dash-box:hover .dash-img {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(5,8,22,0.6);
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .dash-box:hover .overlay {
+      opacity: 1;
+    }
+
+    @media(max-width: 768px) {
+      nav { padding: 20px; }
+      .dashboards { padding: 120px 30px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<nav>
+  <h1>Preetha</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certificates.html">Certificates</a></li>
+    <li><a href="dashboards.html">Dashboards</a></li>
+  </ul>
+</nav>
+
+<section class="dashboards">
+  <h2 class="title">Data Dashboards</h2>
+
+  <!-- Tableau -->
+  <h3 class="sub-title">Tableau Dashboards</h3>
+  <div class="grid">
+
+    <div class="dash-box">
+      <div class="dash-name">
+        Sales Performance Dashboard
+        <div class="tool">Tableau</div>
+      </div>
+      <div class="dash-img" style="background-image:url('assets/dashboards/tableau_sales.jpg')"></div>
+      <div class="overlay"></div>
+    </div>
+
+    <div class="dash-box">
+      <div class="dash-name">
+        Customer Insights Dashboard
+        <div class="tool">Tableau</div>
+      </div>
+      <div class="dash-img" style="background-image:url('assets/dashboards/tableau_customer.jpg')"></div>
+      <div class="overlay"></div>
+    </div>
+
+  </div>
+
+  <!-- Power BI -->
+  <h3 class="sub-title">Power BI Dashboards</h3>
+  <div class="grid">
+
+    <div class="dash-box">
+      <div class="dash-name">
+        Financial Analysis Dashboard
+        <div class="tool">Power BI</div>
+      </div>
+      <div class="dash-img" style="background-image:url('assets/dashboards/powerbi_finance.jpg')"></div>
+      <div class="overlay"></div>
+    </div>
+
+    <div class="dash-box">
+      <div class="dash-name">
+        HR Analytics Dashboard
+        <div class="tool">Power BI</div>
+      </div>
+      <div class="dash-img" style="background-image:url('assets/dashboards/powerbi_hr.jpg')"></div>
+      <div class="overlay"></div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
