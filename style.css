@@ -1,65 +1,302 @@
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  background: #0f172a;
-  color: white;
+  background: #0b132b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
   height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #ff7474,
+    #cf1313,
+    #ff3131
+  );
+  overflow: hidden;
 }
 
-/* NAVBAR */
-.navbar {
-  height: 70px;
-  background: #020617;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
+.overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding-top: 120px;
+  padding-left: 80px;
+  padding-right: 40px;
 }
 
-.logo {
-  color: #38bdf8;
+.flag {
+  position: absolute;
+  top: 0;
+  right: -120px;
+  height: 100%;
+  opacity: 0.9;
+  z-index: 1;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
+/* HERO TEXT */
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
-.nav-links li {
-  list-style: none;
+.subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.intro-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  max-width: 720px;
+}
+
+/* DOWN ARROW */
+.down {
+  margin-top: 30px;
+  font-size: 26px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.nav-links li:hover {
-  color: #38bdf8;
+/* =========================
+   SECTIONS (COMMON)
+========================= */
+.section {
+  padding: 90px 80px;
+  background: #0b132b;
 }
 
-/* PAGES */
-.page {
-  display: none;
-  height: calc(100vh - 70px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.section h1 {
+  font-size: 34px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.page.active {
-  display: flex;
-}
-
-h1 {
+.section h3 {
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-p {
-  max-width: 600px;
-  color: #cbd5f5;
+.section p {
+  line-height: 1.6;
+  font-size: 16px;
 }
 
+.hidden {
+  display: none;
+}
+
+/* =========================
+   DATASET SECTION
+========================= */
+.dataset-image-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.large-image {
+  max-width: 70%;
+  border-radius: 10px;
+}
+
+.dataset-link {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dataset-link a {
+  color: #ff7474;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-block {
+  max-width: 900px;
+  margin: auto;
+}
+
+.content-block ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.content-block li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   DASHBOARD SECTIONS
+========================= */
+.dashboard-description {
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.dashboard {
+  display: block;
+  max-width: 80%;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+
+/* SIDE DECORATIONS */
+.side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.side.left {
+  left: 20px;
+}
+
+.side.right {
+  right: 20px;
+}
+
+.bulb,
+.fan,
+.drop,
+.glass,
+.house {
+  width: 60px;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* =========================
+   SHEET BUTTONS
+========================= */
+.sheet-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.sheet-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #eeeeee;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sheet-btn.active {
+  background: #cf1313;
+  color: #fff;
+}
+
+/* SHEET IMAGES */
+.sheet-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.sheet {
+  display: none;
+  max-width: 85%;
+  border-radius: 10px;
+}
+
+.sheet.active {
+  display: block;
+}
+
+/* =========================
+   ALL SHEETS PAGE
+========================= */
+.all-sheets {
+  text-align: center;
+}
+
+.sheet-img {
+  max-width: 90%;
+  margin: 25px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* =========================
+   NEXT PAGE BUTTON
+========================= */
+.next-page-btn {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.btn-next {
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #ff7474, #cf1313);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.btn-next:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #050814;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .overlay {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .flag {
+    opacity: 0.4;
+    right: -200px;
+  }
+
+  .dashboard,
+  .large-image {
+    max-width: 95%;
+  }
+
+  .section {
+    padding: 70px 30px;
+  }
+}
