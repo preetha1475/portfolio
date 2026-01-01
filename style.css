@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,133 +6,89 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* BODY */
 body {
-  background: #0b132b;
+  background-color: #0f0f0f;
   color: #ffffff;
-  overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO SECTION */
 .hero {
-  position: relative;
   height: 100vh;
-  width: 100%;
-  background: linear-gradient(
-    135deg,
-    #ff7474,
-    #cf1313,
-    #ff3131
-  );
+  background: #000;
+  position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.hero .overlay {
   position: relative;
   z-index: 2;
-  max-width: 850px;
-  padding-top: 120px;
-  padding-left: 80px;
-  padding-right: 40px;
+  padding: 60px;
+  text-align: center;
 }
 
 .flag {
-  position: absolute;
-  top: 0;
-  right: -120px;
-  height: 100%;
-  opacity: 0.9;
-  z-index: 1;
+  max-width: 280px;
+  margin-bottom: 20px;
 }
 
-/* HERO TEXT */
 .hero h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-
-.subtitle {
-  font-size: 18px;
-  opacity: 0.9;
-  margin-bottom: 25px;
-}
-
-.intro-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-  max-width: 720px;
-}
-
-/* DOWN ARROW */
-.down {
-  margin-top: 30px;
-  font-size: 26px;
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* =========================
-   SECTIONS (COMMON)
-========================= */
-.section {
-  padding: 90px 80px;
-  background: #0b132b;
-}
-
-.section h1 {
-  font-size: 34px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.section h3 {
-  margin-top: 20px;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
-.section p {
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-.hidden {
-  display: none;
-}
-
-/* =========================
-   DATASET SECTION
-========================= */
-.dataset-image-container {
-  text-align: center;
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.85;
   margin-bottom: 30px;
 }
 
-.large-image {
-  max-width: 70%;
-  border-radius: 10px;
-}
-
-.dataset-link {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.dataset-link a {
-  color: #ff7474;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.content-block {
+.intro-text {
   max-width: 900px;
   margin: auto;
+  font-size: 1.05rem;
+}
+
+.down {
+  margin-top: 40px;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* CONTENT BLOCK */
+.content-block {
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: left;
 }
 
 .content-block ul {
@@ -143,160 +97,112 @@ body {
 }
 
 .content-block li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
-/* =========================
-   DASHBOARD SECTIONS
-========================= */
+/* DASHBOARD DESCRIPTION */
 .dashboard-description {
-  max-width: 850px;
-  margin: auto;
-  margin-bottom: 30px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: left;
 }
 
+/* DASHBOARD IMAGE */
 .dashboard {
+  width: 70%;
+  max-width: 1100px;
+  margin: 30px auto;
   display: block;
-  max-width: 80%;
-  margin: 40px auto;
   border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* SIDE DECORATIONS */
+/* LARGE IMAGE (DATASET) */
+.large-image {
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* DATASET LINK */
+.dataset-link {
+  margin-top: 15px;
+}
+
+.dataset-link a {
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dataset-link a:hover {
+  text-decoration: underline;
+}
+
+/* SIDE ANIMATIONS */
 .side {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
 }
 
 .side.left {
-  left: 20px;
+  left: 30px;
 }
 
 .side.right {
-  right: 20px;
+  right: 30px;
 }
 
-.bulb,
-.fan,
-.drop,
-.glass,
-.house {
-  width: 60px;
-  display: block;
-  margin-bottom: 20px;
+.bulb, .fan, .drop, .glass, .house {
+  width: 50px;
+  margin: 10px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* FOOTER */
+footer {
+  padding: 25px;
+  background: #000;
+  text-align: center;
+  font-size: 0.9rem;
   opacity: 0.8;
 }
 
-/* =========================
-   SHEET BUTTONS
-========================= */
-.sheet-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 25px;
+/* SCROLL ANIMATION */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
 
-.sheet-btn {
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: none;
-  background: #eeeeee;
-  color: #000;
-  cursor: pointer;
-  font-size: 14px;
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.sheet-btn.active {
-  background: #cf1313;
-  color: #fff;
-}
-
-/* SHEET IMAGES */
-.sheet-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.sheet {
-  display: none;
-  max-width: 85%;
-  border-radius: 10px;
-}
-
-.sheet.active {
-  display: block;
-}
-
-/* =========================
-   ALL SHEETS PAGE
-========================= */
-.all-sheets {
-  text-align: center;
-}
-
-.sheet-img {
-  max-width: 90%;
-  margin: 25px auto;
-  display: block;
-  border-radius: 10px;
-}
-
-/* =========================
-   NEXT PAGE BUTTON
-========================= */
-.next-page-btn {
-  text-align: center;
-  margin: 60px 0;
-}
-
-.btn-next {
-  padding: 14px 30px;
-  background: linear-gradient(135deg, #ff7474, #cf1313);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: transform 0.2s ease;
-}
-
-.btn-next:hover {
-  transform: scale(1.05);
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #050814;
-  text-align: center;
-  padding: 25px;
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .overlay {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .flag {
-    opacity: 0.4;
-    right: -200px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
   }
 
   .dashboard,
   .large-image {
-    max-width: 95%;
+    width: 95%;
+  }
+
+  .side {
+    display: none;
   }
 
   .section {
-    padding: 70px 30px;
+    padding: 60px 20px;
   }
 }
